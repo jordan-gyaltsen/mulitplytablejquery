@@ -1,0 +1,82 @@
+/*
+Copyright Jordan Gyaltsen 2022 
+jordangyaltsen@student.uml.edu
+*/
+
+/* style the table,headers,and data 
+for a uniform, readable design. */
+table, th, td {
+    text-align: center;
+      padding: 8px;
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    
+    #errmsg {
+        margin-top: 15px;
+        background-color: black;
+        color:red;
+    }
+    
+    body {
+        background-color: rgb(7, 92, 88);
+    }
+    
+    .container{
+        background-color: lightseagreen;
+        border-style: groove;
+    }
+    
+    .title{
+        text-align: center;
+        background-color: lightseagreen;    
+        border-style: groove;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    /*
+    used for my header and the form
+    overflows ensure tables are scrollable in their sections
+    and don't spill too far over page.
+    */
+    section {
+        font-family: Arial, Helvetica, sans-serif;
+        align-content: center;
+        margin: auto;
+        margin-top: 3%;
+        width: 80%;
+        padding-left: 3%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        overflow-x:auto;
+        overflow-y:auto;
+    }
+    
+    table {
+        max-width: 100%;
+    }
+    
+    #result{
+        max-height: 500px;
+    }
+    
+    /*th will be wierd red to distinguish them from the <td> cells*/
+    th {
+        background-color: palevioletred;
+    }
+    
+    /* table cells, by default, will have a blue background */
+    tr td {
+        background-color: skyblue;
+    }
+    /*  every cell on an even row and odd column
+        or odd row and even column has a white
+        background. Producing checkered pattern.  */
+    tr:nth-child(even) td:nth-child(odd), 
+    tr:nth-child(odd) td:nth-child(even) {
+        background-color: white;
+    }
+    
+    /* limit height of container holding table to 500px*/
+    .result {
+        max-height: 500px;
+    }

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Copyright Jordan Gyaltsen 2022 
+    jordangyaltsen@student.uml.edu -->
+    <!-- required tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- links to external files-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <title>Multiplication table</title>
+</head>
+
+<body>
+    <section class = 'title'>
+        <h1>Multiplication table</h1>
+        <p>Table will start dyanmically updating upon first adequete input and will cease 
+            whenever inputs are invalid.
+        </p>
+    </section>
+      <!-- section contains form -->
+      <section class="container" id="container">
+        <!-- min and max attributes require entries be in range -->
+        <!-- required attribute prevents no input case -->
+        <!-- min > max case is dealt with in .js portion -->
+        <!-- these apply for every input in this form -->
+        <form id="myform" onsubmit="event.preventDefault();">
+            <div>
+                <label for="colmin">Minimum Column value (between -50 and 50):</label>
+                <div id="slider1"></div>
+                <input class="inputNum" type="number" id="colmin" name="colmin" value="0" min="-50" max="50">
+            </div>
+
+            <div>
+                <label for="colmax">Maximum Column Value (between -50 and 50):</label>
+                <div id="slider2"></div>
+                <input class="inputNum" type="number" id="colmax" name="colmax" value="0" min="-50" max="50">
+            </div>
+            <div>
+                <label for="rowmin">Minimum Row Value (between -50 and 50):</label>
+                <div id="slider3"></div>
+                <input class="inputNum" type="number" id="rowmin" name="rowmin" value="0" min="-50" max="50">
+            </div>
+            <div>
+                <label for="rowmax">Maximum Row Value (between -50 and 50):</label>
+                <div id="slider4"></div>
+                <input class="inputNum" type="number" id="rowmax" name="rowmax" value="0" min="-50" max="50">
+            </div>
+        </form>
+        <button id='add-tab'>Add tab</button>
+        <!-- blank element used when error message needs to be shown. -->
+        <div id="errmsg"></div>
+    </section>
+    <section id="result"><table id='mytable'></table></section>
+    <div id="tabs">
+        <ul class=""></ul>
+    </div>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script src="js/jqueryscript.js" charset="utf-8"></script>
+        <script src="js/jquery-ui.min.js"></script>
+</body>
+</html>
